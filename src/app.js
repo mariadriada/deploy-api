@@ -7,6 +7,11 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+
+app.get("/", (req, res)=>{
+res.send("hello!!")
+})
+
 app.use("/gestor", gestorRoutes);
 app.use("/project", projectRoutes);
 app.use("/gestor-project", gestorProjectRouter);
